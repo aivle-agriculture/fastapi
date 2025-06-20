@@ -1,0 +1,35 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# macOS / Windows system files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# IDE / editor settings
+.vscode/
+.idea/
+
+# Test artifacts
+*.log
+coverage/
+htmlcov/
+.pytest_cache/
+.tox/
+.mypy_cache/
+pytestdebug.log
+
+# Docker-related
+.dockerignore
+
+.env
