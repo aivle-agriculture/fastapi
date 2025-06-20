@@ -1,6 +1,6 @@
 import os
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.vectorstores import Chroma
+from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_community.vectorstores import Chroma
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
 DB_DIR = os.getenv("DB_DIR", os.path.join(BASE_DIR, "chroma/calculate_db"))

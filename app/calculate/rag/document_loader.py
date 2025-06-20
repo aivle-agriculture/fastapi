@@ -1,5 +1,5 @@
 import os
-from langchain.document_loaders import TextLoader
+from langchain_community.document_loaders import TextLoader
 from app.calculate.enums import InsuredItem
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
