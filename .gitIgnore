@@ -1,3 +1,4 @@
 .env
 chroma/
 pdfs/
+__pycache__/
