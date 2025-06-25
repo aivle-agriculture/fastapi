@@ -28,10 +28,12 @@ def generate_node(state):
     context = "\n\n".join(doc.page_content for doc in state.get("documents", []))
     prompt = PromptTemplate.from_template(
         """당신은 보험 약관 기반 질문 응답 챗봇입니다.
-        질문: {question}
-        약관 발췌 내용: {context}
-        응답:"""
+    이전 대화 내용: 아래 메시지 리스트를 참고하세요.
+    질문: {question}
+    약관 발췌 내용: {context}
+    응답:"""
     )
+
     chain = prompt | llm | StrOutputParser()
     ans = chain.invoke({"question": question, "context": context})
     return {"messages": [AIMessage(content=ans)]}
